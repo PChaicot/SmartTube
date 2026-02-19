@@ -105,3 +105,10 @@ jobs:
           name: SmartTube_${{ steps.get_version.outputs.VERSION_NAME }}_x86
           path: ./smarttubetv/build/outputs/apk/stbeta/release/*_x86.apk
           if-no-files-found: error
+
+      - name: Upload x86_64 APK
+        uses: actions/upload-artifact@v6
+        with:
+          name: SmartTube_${{ steps.get_version.outputs.VERSION_NAME }}_x86_64
+          path: ./smarttubetv/build/outputs/apk/stbeta/release/*_x86_64.apk
+          if-no-files-found: error
